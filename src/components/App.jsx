@@ -1,3 +1,7 @@
 export const App = () => {
-  return <div></div>;
+  return (
+    <div className="todo">
+      <div className="todo__sidebar"></div>
+    </div>
+  );
 };
