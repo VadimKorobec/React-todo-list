@@ -10,21 +10,22 @@ export const App = () => {
             {
               icon: <img src={listSvg} alt="list icon" />,
               name: 'All tasks',
+              active: true,
             },
           ]}
         />
         <List
           items={[
             {
-              color: '#42B883',
+              color: 'green',
               name: 'Shopping',
             },
             {
-              color: '#64C4ED',
+              color: 'blue',
               name: 'Frontend',
             },
             {
-              color: '#FFBBCC',
+              color: 'pink',
               name: 'Movies and serials',
             },
           ]}
