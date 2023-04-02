@@ -1,9 +1,11 @@
 .list {
+  margin-bottom: 30px;
+
   li {
     display: flex;
     align-items: center;
     padding: 10px 12px;
-    margin-bottom: 5px;
+
     cursor: pointer;
 
     &.active {
@@ -13,7 +15,28 @@
     }
 
     i {
-      margin-right: 10px;
+      display: inline-flex;
+      margin-right: 8px;
+    }
+
+    .badge {
+      width: 10px;
+      height: 10px;
+      border-radius: 30px;
+      position: relative;
+      left: 5px;
+
+      &--green {
+        background-color: #42b883;
+      }
+
+      &--blue {
+        background-color: #64c4ed;
+      }
+
+      &--pink {
+        background-color: #ffbbcc;
+      }
     }
   }
 }
