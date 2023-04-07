@@ -1,6 +1,17 @@
 .list {
   margin-bottom: 30px;
 
+  &__add-button {
+    span {
+      color: #767676;
+    }
+
+    &:hover {
+      span {
+        color: black;
+      }
+    }
+  }
   li {
     display: flex;
     align-items: center;
@@ -36,6 +47,14 @@
 
       &--pink {
         background-color: #ffbbcc;
+      }
+
+      &--greening {
+        background-color: #b6e6bd;
+      }
+
+      &--gree {
+        background-color: #c9d1d3;
       }
     }
   }
