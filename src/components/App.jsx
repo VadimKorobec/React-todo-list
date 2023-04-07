@@ -30,6 +30,14 @@ export const App = () => {
               name: 'Movies and serials',
               active: true,
             },
+            {
+              color: 'greening',
+              name: 'Books',
+            },
+            {
+              color: 'gree',
+              name: 'Personal',
+            },
           ]}
           isRemovable
         />
