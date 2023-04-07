@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { List } from './List/List';
 import { AddButtonList } from './AddButtonList/AddButtonList';
 import listSvg from '../assets/img/Vector.svg';
