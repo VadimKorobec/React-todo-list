@@ -1,8 +1,7 @@
-import { List } from './List/List';
 import { useState } from 'react';
-
-import listSvg from '../assets/img/Vector.svg';
+import { List } from './List/List';
 import { AddButtonList } from './AddButtonList/AddButtonList';
+import listSvg from '../assets/img/Vector.svg';
 
 export const App = () => {
   const [state, setState] = useState('hello world');
