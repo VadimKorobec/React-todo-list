@@ -1,11 +1,16 @@
 import { List } from './List/List';
+import { useState } from 'react';
+
 import listSvg from '../assets/img/Vector.svg';
-import plusSvg from '../assets/img/Group.svg';
+import { AddButtonList } from './AddButtonList/AddButtonList';
 
 export const App = () => {
+  const [state, setState] = useState('hello world');
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
+        <button onClick={() => alert('ku-ku')}>reset</button>
         <List
           items={[
             {
@@ -41,16 +46,7 @@ export const App = () => {
           ]}
           isRemovable
         />
-        <List
-          items={[
-            {
-              className: 'list__add-button',
-              icon: <img src={plusSvg} alt="add icon" />,
-              name: 'Add List ',
-            },
-          ]}
-          isRemovable
-        />
+        <AddButtonList />
       </div>
       <div className="todo__tasks"></div>
     </div>
