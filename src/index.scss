@@ -32,3 +32,29 @@ body {
     padding: 60px 20px;
   }
 }
+
+.button {
+  background: #4dd599;
+  border-radius: 4px;
+  color: #ffffff;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+
+  &:hover {
+    background: #3fcc8f;
+  }
+}
+
+.field {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #efefef;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+
+  &:focus {
+    border-color: #dfdfdf;
+  }
+}
