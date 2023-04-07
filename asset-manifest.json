@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/React-todo-list/static/css/main.95101828.css",
-    "main.js": "/React-todo-list/static/js/main.bc7b528a.js",
+    "main.css": "/React-todo-list/static/css/main.4afb7ce3.css",
+    "main.js": "/React-todo-list/static/js/main.98a4e2d2.js",
     "static/media/Vector.svg": "/React-todo-list/static/media/Vector.a862c15f565e11d25259ce5cd343b0e6.svg",
     "index.html": "/React-todo-list/index.html",
-    "main.95101828.css.map": "/React-todo-list/static/css/main.95101828.css.map",
-    "main.bc7b528a.js.map": "/React-todo-list/static/js/main.bc7b528a.js.map"
+    "static/media/Group.svg": "/React-todo-list/static/media/Group.bb82cf258224298ee8e8019bff6b7e1c.svg",
+    "main.4afb7ce3.css.map": "/React-todo-list/static/css/main.4afb7ce3.css.map",
+    "main.98a4e2d2.js.map": "/React-todo-list/static/js/main.98a4e2d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.95101828.css",
-    "static/js/main.bc7b528a.js"
+    "static/css/main.4afb7ce3.css",
+    "static/js/main.98a4e2d2.js"
   ]
 }
