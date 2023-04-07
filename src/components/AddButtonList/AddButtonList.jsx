@@ -12,8 +12,8 @@ export const AddButtonList = () => {
             name: 'Add List ',
           },
         ]}
-        isRemovable
       />
+      <div className="add-list-form"></div>
     </div>
   );
 };
