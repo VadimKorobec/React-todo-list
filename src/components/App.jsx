@@ -4,12 +4,9 @@ import { AddButtonList } from './AddButtonList/AddButtonList';
 import listSvg from '../assets/img/Vector.svg';
 
 export const App = () => {
-  const [state, setState] = useState('hello world');
-
   return (
     <div className="todo">
       <div className="todo__sidebar">
-        <button onClick={() => alert('ku-ku')}>reset</button>
         <List
           items={[
             {
