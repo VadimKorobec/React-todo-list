@@ -8,6 +8,7 @@ import '../AddButtonList/AddButtonList.scss';
 export const AddButtonList = ({ colors }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
   const [selectedColor, setSelectedColor] = useState(colors[0].id);
+  const [inputValue, setInputValue] = useState('');
 
   return (
     <div className="add-list">
@@ -29,7 +30,13 @@ export const AddButtonList = ({ colors }) => {
             alt="clous btn"
             className="add-list__popup-clouse-btn"
           />
-          <input className="field" type="text" placeholder="Folder name" />
+          <input
+            value={inputValue}
+            onChange={event => setInputValue(event.currentTarget.value)}
+            className="field"
+            type="text"
+            placeholder="Folder name"
+          />
           <div className="add-list__popup-colors">
             {colors.map(color => (
               <Badge
