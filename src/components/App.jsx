@@ -1,10 +1,17 @@
 import { List } from './List/List';
 import { AddButtonList } from './AddButtonList/AddButtonList';
 import listSvg from '../assets/img/Vector.svg';
-
 import DB from '../assets/db.json';
+import { useState } from 'react';
 
 export const App = () => {
+  const [lists, setLists] = useState(
+    DB.lists.map(list => {
+      list.color = DB.colors.filter(color => color.id === list.colorId)[0].name;
+      return list;
+    })
+  );
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -17,32 +24,7 @@ export const App = () => {
             },
           ]}
         />
-        <List
-          items={[
-            {
-              color: 'green',
-              name: 'Shopping',
-            },
-            {
-              color: 'blue',
-              name: 'Frontend',
-            },
-            {
-              color: 'pink',
-              name: 'Movies and serials',
-              active: true,
-            },
-            {
-              color: 'greening',
-              name: 'Books',
-            },
-            {
-              color: 'gree',
-              name: 'Personal',
-            },
-          ]}
-          isRemovable
-        />
+        <List items={lists} isRemovable />
         <AddButtonList colors={DB.colors} />
       </div>
       <div className="todo__tasks"></div>
