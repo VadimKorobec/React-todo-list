@@ -7,7 +7,7 @@ import { Badge } from 'components/Badge/Badge';
 
 export const AddButtonList = ({ colors }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const [selectedColor, setSelectedColor] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(colors[0].id);
 
   return (
     <div className="add-list">
