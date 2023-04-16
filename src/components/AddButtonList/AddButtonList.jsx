@@ -7,6 +7,7 @@ import { Badge } from 'components/Badge/Badge';
 
 export const AddButtonList = ({ colors }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
+  const [selectedColor, setSelectedColor] = useState(null);
 
   return (
     <div className="add-list">
@@ -24,12 +25,14 @@ export const AddButtonList = ({ colors }) => {
         <div className="add-list__popup">
           <input className="field" type="text" placeholder="Folder name" />
           <div className="add-list__popup-colors">
-            <ul>
-              <li>
-                <Badge color="green" />
-              </li>
-              <li></li>
-            </ul>
+            {colors.map(color => (
+              <Badge
+                onClick={() => setSelectedColor(color.id)}
+                key={color.id}
+                color={color.name}
+                className={selectedColor === color.id && 'active'}
+              />
+            ))}
           </div>
           <button className="button">Add Folder</button>
         </div>
