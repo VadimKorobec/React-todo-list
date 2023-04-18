@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/React-todo-list/static/css/main.5de7442f.css",
-    "main.js": "/React-todo-list/static/js/main.c19fb649.js",
+    "main.css": "/React-todo-list/static/css/main.e7cdaaab.css",
+    "main.js": "/React-todo-list/static/js/main.16a56e1b.js",
     "static/media/Vector.svg": "/React-todo-list/static/media/Vector.a862c15f565e11d25259ce5cd343b0e6.svg",
     "static/media/closeSvg.svg": "/React-todo-list/static/media/closeSvg.ac7b9278cab353907f42c5983ebc5569.svg",
     "index.html": "/React-todo-list/index.html",
     "static/media/Group.svg": "/React-todo-list/static/media/Group.bb82cf258224298ee8e8019bff6b7e1c.svg",
-    "main.5de7442f.css.map": "/React-todo-list/static/css/main.5de7442f.css.map",
-    "main.c19fb649.js.map": "/React-todo-list/static/js/main.c19fb649.js.map"
+    "main.e7cdaaab.css.map": "/React-todo-list/static/css/main.e7cdaaab.css.map",
+    "main.16a56e1b.js.map": "/React-todo-list/static/js/main.16a56e1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.5de7442f.css",
-    "static/js/main.c19fb649.js"
+    "static/css/main.e7cdaaab.css",
+    "static/js/main.16a56e1b.js"
   ]
 }
