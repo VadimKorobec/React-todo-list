@@ -12,6 +12,11 @@ export const App = () => {
     })
   );
 
+  const onAddList = obj => {
+    const newList = [...lists, obj];
+    setLists(newList);
+  };
+
   return (
     <div className="todo">
       <div className="todo__sidebar">
@@ -25,7 +30,7 @@ export const App = () => {
           ]}
         />
         <List items={lists} isRemovable />
-        <AddButtonList colors={DB.colors} />
+        <AddButtonList onAdd={onAddList} colors={DB.colors} />
       </div>
       <div className="todo__tasks"></div>
     </div>
