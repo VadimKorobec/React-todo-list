@@ -3,6 +3,7 @@ import { AddButtonList } from './AddButtonList/AddButtonList';
 import listSvg from '../assets/img/Vector.svg';
 import DB from '../assets/db.json';
 import { useState } from 'react';
+import { Tasks } from './Tasks/Tasks';
 
 export const App = () => {
   const [lists, setLists] = useState(
@@ -29,10 +30,12 @@ export const App = () => {
             },
           ]}
         />
-        <List items={lists} isRemovable />
+        <List items={lists} onRemove={list => console.log(list)} isRemovable />
         <AddButtonList onAdd={onAddList} colors={DB.colors} />
       </div>
-      <div className="todo__tasks"></div>
+      <div className="todo__tasks">
+        <Tasks />
+      </div>
     </div>
   );
 };
