@@ -4,7 +4,12 @@ import closeX from '../../assets/img/closeX.svg';
 import '../List/List.scss';
 import { Badge } from 'components/Badge/Badge';
 
-export const List = ({ items, isRemovable, onClick }) => {
+export const List = ({ items, isRemovable, onClick, onRemove }) => {
+  const removeList = item => {
+    if (window.confirm('Do you want to delete the list?')) {
+      onRemove(item);
+    }
+  };
   return (
     <div>
       <ul onClick={onClick} className="list">
@@ -16,7 +21,12 @@ export const List = ({ items, isRemovable, onClick }) => {
             <i>{item.icon ? item.icon : <Badge color={item.color} />}</i>
             <span>{item.name}</span>
             {isRemovable && (
-              <img className="list__remove-icon" src={closeX} alt="close X" />
+              <img
+                onClick={removeList}
+                className="list__remove-icon"
+                src={closeX}
+                alt="close X"
+              />
             )}
           </li>
         ))}
