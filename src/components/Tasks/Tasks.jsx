@@ -17,8 +17,8 @@ export const Tasks = () => {
               <label htmlFor="check">
                 <img src={checkSvg} alt="check icon" />
               </label>
-              <input value="ReactJS Hooks (useState, useReducer, useEffect)" />
             </div>
+            <p>ReactJS Hooks (useState, useEffect)</p>
           </div>
         </div>
       </div>
