@@ -1,5 +1,6 @@
 import './Tasks.scss';
 import penSvg from '../../assets/img/pen.svg';
+import checkSvg from '../../assets/img/check.w.svg';
 
 export const Tasks = () => {
   return (
@@ -9,6 +10,16 @@ export const Tasks = () => {
           Frontend
           <img src={penSvg} alt="pen icon" />
         </h2>
+        <div className="tasks__items">
+          <div className="tasks__item-row">
+            <div className="checkbox">
+              <input id="check" type="checkbox" />
+              <label htmlFor="check">
+                <img src={checkSvg} alt="check icon" />
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
