@@ -1,14 +1,22 @@
 import { List } from '../List/List';
+import axios from 'axios';
 import plusSvg from '../../assets/img/Group.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Badge } from 'components/Badge/Badge';
 import closeSvg from '../../assets/img/closeSvg.svg';
 import '../AddButtonList/AddButtonList.scss';
 
 export const AddButtonList = ({ colors, onAdd }) => {
   const [visiblePopup, setVisiblePopup] = useState(false);
-  const [selectedColor, setSelectedColor] = useState(colors[0].id);
+  const [selectedColor, setSelectedColor] = useState(3);
+  const [isLoading, setIsLoading] = useState(false);
   const [inputValue, setInputValue] = useState('');
+
+  useEffect(() => {
+    if (Array.isArray(colors)) {
+      setSelectedColor(colors[0].id);
+    }
+  }, [colors]);
 
   const onClose = () => {
     setVisiblePopup(false);
@@ -21,13 +29,25 @@ export const AddButtonList = ({ colors, onAdd }) => {
       alert('Please enter list name');
       return;
     }
-    const color = colors.filter(color => color.id === selectedColor)[0].name;
-    onAdd({
-      id: Math.random(),
-      name: inputValue,
-      color: color,
-    });
-    onClose();
+    setIsLoading(true);
+    axios
+      .post('http://localhost:3001/lists', {
+        name: inputValue,
+        colorId: selectedColor,
+      })
+      .then(({ data }) => {
+        const color = colors.filter(color => color.id === selectedColor)[0]
+          .name;
+        const listObj = { ...data, color: { name: color } };
+        onAdd(listObj);
+        onClose();
+      })
+      .catch(error => {
+        console.log(error);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -68,7 +88,7 @@ export const AddButtonList = ({ colors, onAdd }) => {
             ))}
           </div>
           <button onClick={addList} className="button">
-            Add Folder
+            {isLoading ? 'Addition...' : ' Add Folder'}
           </button>
         </div>
       )}
